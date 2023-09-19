@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintain User Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS styling for the Maintain User Page */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2;
+            font-size: 5%;
+        }
+
+        .header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            border-bottom: 2px solid #555;
+            width: 100%;
+            font-size: 5%;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .main-container {
+            background-color: #fff;
+            padding: 50px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            max-width: 500px;
+            margin: 20px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-container {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .menu-button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: left;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-button:hover {
+            background-color: #555;
+        }
+
+        .small-button {
+            padding: 5px 5px; 
+          
+        }
+
+        .large-button {
+            padding: 20px 20px; 
+            background-color: #4CAF50; 
+        }
+
+        .large-button:hover {
+            background-color: #45a049; 
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Maintain User Page</h1>
+    </header>
+    <div class="main-container">
+        <div class="menu-container">
+            <button class="menu-button small-button" onclick="goHome()">Home</button>
+        </div>
+        <div class="menu-container">
+            <button class="menu-button large-button" onclick="toggleActions('membership')">Membership</button>
+            <div class="action-buttons" id="membership" style="display: none;">
+                <button class="large-button" onclick="addMembership()">Add</button>
+                <button class="large-button" onclick="updateMembership()">Update</button>
+            </div>
+        </div>
+        <div class="menu-container">
+            <button class="menu-button large-button" onclick="toggleActions('user-management')">User Management</button>
+            <div class="action-buttons" id="user-management" style="display: none;">
+                <button class="large-button" onclick="addUser()">Add</button>
+                <button class="large-button" onclick="updateUser()">Update</button>
+            </div>
+        </div>
+        <div class="menu-container">
+            <button class="menu-button small-button" onclick="goHome()">Logout</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleActions(menuId) {
+            const actions = document.getElementById(menuId);
+            actions.style.display = actions.style.display === "none" ? "flex" : "none";
+        }
+
+        function goHome() {
+            
+            window.location.href = "homepage.html";
+        }
+
+        function addMembership() {
+            // Implement the logic for adding membership
+        }
+
+        function updateMembership() {
+            // Implement the logic for updating membership
+        }
+
+        function addUser() {
+            // Implement the logic for adding user
+        }
+
+        function updateUser() {
+            // Implement the logic for updating user
+        }
+    </script>
+</body>
+</html>
